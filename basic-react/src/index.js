@@ -1,7 +1,17 @@
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-console.log("First React App..")
+import './index.css'
 
-const el = document.getElementById('root')
+import First from './components/basics/First'
+import WithParameter from './components/basics/WithParameter'
 
-ReactDOM.render('Olá React!@!', el)
+ReactDOM.render(
+	<div>
+		<First />
+		<WithParameter 
+			title="Segundo Componente" 
+			subtitle="Subtitulo do segundo componente" />
+	</div>,
+	document.getElementById('root')
+)
